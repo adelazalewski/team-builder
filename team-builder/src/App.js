@@ -10,6 +10,7 @@ import TeamMemberCard from "./components/cardTeamMember";
 const Header = styled.header`
 padding: 2rem;
 font-size: 200%;
+font-family: 'Lora', serif;
 `;
 const Wrapper = styled.div`
 background-image: url(${background});
@@ -18,7 +19,7 @@ background-image: url(${background});
 function App() {
   const [teamMembers, setTeamMembers] = useState(data);
 
-  const addNewTeamMemeber = (formData) => {
+  const addNewTeamMember = (formData) => {
     const newTeamMember = {
       id: Date.now(),
       name: formData.name,
@@ -33,7 +34,7 @@ function App() {
       <Header className="App-header">
         Join Your Dream Team
       </Header>
-      <Form addNewTeamMemeber={addNewTeamMemeber} />
+      <Form addNewTeamMember={addNewTeamMember} />
       <TeamMemberCard teamMembers={teamMembers} />
     </Wrapper>
   );

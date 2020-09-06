@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
 const Form = (props) => {
-    console.log("form props: ", props);
+    //console.log("form props: ", props);
+    const year = new Date();
     const [newPersonJoining, setNewPersonJoining] = useState({
         name: '',
         email: '',
         role: '',
+        joined: year.getFullYear(),
     });
+   
     const changeHandler = (e) => {
         setNewPersonJoining({
             ...newPersonJoining,
