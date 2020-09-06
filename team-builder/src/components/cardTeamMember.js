@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import data from "./data";
+//import data from "./data";
 
-const TeamMemberCard = () => {
-    const [teamMembers, setTeamMembers] = useState(data);
-    //console.log(teamMembers);
+const TeamMemberCard = (props) => {
+    // const [teamMembers, setTeamMembers] = useState(data);
+    console.log("props in TeamMemeberCard: ", props);
     return (
         <div className="teamMembers-list">
             <h1>Team Member's List</h1>
-            {teamMembers.map((element, index) => {
+            {props.map((element, index) => {
                 return(
                 <div className="card" key={element.id}>
                     <h2>{element.name}</h2>
